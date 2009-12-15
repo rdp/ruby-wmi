@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require 'rubygems'
 require 'jeweler'
 

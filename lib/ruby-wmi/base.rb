@@ -51,6 +51,7 @@ module WMI
           case error.to_s
           when /Invalid class/i ; raise InvalidClass
           when /Invalid query/i ; raise InvalidQuery
+
           end
         end
         d.to_a
@@ -203,5 +204,10 @@ module WMI
 
   def const_missing(name)
     self.const_set(name, Class.new(self::Base))
+  end
+
+  # allow for "WMI.Win32_Disk" style access
+  def self.method_missing(m, *args)
+   eval("WMI::" + m)
   end
 end
