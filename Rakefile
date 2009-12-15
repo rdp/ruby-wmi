@@ -2,7 +2,7 @@ require 'rubygems'
 require 'jeweler'
 
 Jeweler::Tasks.new do |p|
-  p.name = 'ruby-wmi'
+  p.name = 'rdp-ruby-wmi'
   p.summary = 'WMI queries, easier'
   p.author = 'Gordon Thiesfeld'
   p.email = 'gthiesfeld@gmail.com'
